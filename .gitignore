@@ -1,0 +1,5 @@
+.DS_Store
+*.pdf
+receiver_output.txt
+Transmitted_Data.json
+report.md
