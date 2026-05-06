@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Usage: python receiver.py --receiver-private-key receiver_private.pem --output-file receiver_output.txt
+# Usage: python receiver.py --receiver-private-key [RECEIVER_PRIVATE_KEY].pem --output-file [OUTPUT_FILE].txt
 
 import argparse
 import base64

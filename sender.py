@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Usage: python sender.py sender_message.txt --receiver-public-key receiver_public.pem
+# Usage: python sender.py [MESSAGE_FILE].txt --receiver-public-key [RECEIVER_PUBLIC_KEY].pem
 
 import argparse
 import base64
