@@ -48,8 +48,11 @@ def decrypt_and_verify(transmitted_data: dict, receiver_private_key: RSA.RsaKey)
     mac.update(iv)
     mac.update(ciphertext)
 
-    # Raises ValueError if payload was modified or wrong key was used.
-    mac.verify(received_mac)
+    try:
+        mac.verify(received_mac)
+    except ValueError:
+        print("Failed to verify MAC.")
+        sys.exit(1)
 
     # Only decrypt ciphertext after authentication succeeds.
     aes_cipher = AES.new(aes_key, AES.MODE_CBC, iv)
